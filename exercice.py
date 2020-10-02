@@ -20,27 +20,40 @@ def color_name_to_hex(colors: list) -> list:
 
 
 def odd_integer_for_loop(end: int) -> list:
-    return []
+    liste = []
+    for i in range(end):
+        if i % 2 != 0:
+            liste.append(i)
+    return liste
 
 
 def odd_integer_list_comprehension(end: int) -> list:
-    return []
+     liste = [i for i in range(end) if i % 2 != 0]
+     return liste
 
 
 def loop_traversal(integers: list) -> None:
-    pass
+    for i in range(len(integers)):
+        print(integers[i], i)
 
 
 def word_dict_for_loop(words: str) -> dict:
-    return {}
+    dict = {}
+    for i in words:
+        dict[i[0].upper()] = i
+
+    return dict
 
 
 def word_dict_comprehension(words: str) -> dict:
-    return {}
+    dict = {i[0].upper(): i for i in words}
+    return dict
 
 
 def dictionary_traversal(words: dict) -> None:
-    pass
+    liste = [words[i] for i in words] #comment mette les indexs
+    liste.sort()
+    return liste
 
 
 def main() -> None:
@@ -53,7 +66,7 @@ def main() -> None:
     integer = 13
     integers_for = odd_integer_for_loop(integer)
     print(f"Liste avec boucle for et le nombre 13: {integers_for}")
-    integers_comprehension = odd_integer_for_loop(integer)
+    integers_comprehension = odd_integer_list_comprehension(integer)
     print(f"Liste avec list comprehension et le nombre 13: {integers_comprehension}")
 
     print(f"Les 2 listes sont-elles identiques? {integers_for == integers_comprehension}")
@@ -68,7 +81,7 @@ def main() -> None:
 
     print(f"Les 2 dictionnaires sont-ils identiques? {words_for == words_comprehension}")
     print(f"Parcours d'un des 2 dictionnaires...")
-    loop_traversal(words_comprehension)
+    print(dictionary_traversal(words_comprehension))
 
 
 if __name__ == '__main__':
