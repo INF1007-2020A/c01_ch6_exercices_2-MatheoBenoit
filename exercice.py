@@ -7,7 +7,11 @@ from matplotlib.colors import cnames
 
 def list_to_dict(some_list: list) -> dict:
     # TODO: Transformer la liste en dictionnaire, les éléments de la liste deviennent les clés et leur index deviennent les valeurs
-    return {}
+    dict = {}
+    for i in range(len(some_list)):
+        dict.update({some_list[i]: i})
+
+    return dict
 
 
 def color_name_to_hex(colors: list) -> list:
@@ -27,11 +31,11 @@ def loop_traversal(integers: list) -> None:
     pass
 
 
-def word_dict_for_loop() -> dict:
+def word_dict_for_loop(words: str) -> dict:
     return {}
 
 
-def word_dict_comprehension() -> dict:
+def word_dict_comprehension(words: str) -> dict:
     return {}
 
 
