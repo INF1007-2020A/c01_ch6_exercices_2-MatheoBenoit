@@ -52,8 +52,12 @@ def word_dict_comprehension(words: str) -> dict:
 
 def dictionary_traversal(words: dict) -> None:
     liste = [words[i] for i in words] #comment mette les indexs
+
     liste.sort()
-    return liste
+
+    for i in range(len(liste)):
+        print(liste[i], i)
+
 
 
 def main() -> None:
