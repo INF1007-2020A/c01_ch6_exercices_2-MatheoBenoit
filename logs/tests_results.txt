@@ -1,35 +1,11 @@
-test_color_name_to_hex (__main__.TestExercice) ... FAIL
+test_color_name_to_hex (__main__.TestExercice) ... ok
 test_list_to_dict (__main__.TestExercice) ... ok
 test_odd_integer_for_loop (__main__.TestExercice) ... ok
 test_odd_integer_list_comprehension (__main__.TestExercice) ... ok
 test_word_dict_comprehension (__main__.TestExercice) ... ok
 test_word_dict_for_loop (__main__.TestExercice) ... ok
 
-======================================================================
-FAIL: test_color_name_to_hex (__main__.TestExercice)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 39, in test_color_name_to_hex
-    'Mauvaise reponse'
-AssertionError: Lists differ: [[], []] != [[('blue', '#0000FF'), ('red', '#FF0000'), [172 chars]A')]]
+Ran 6 tests in 0.000s
 
-First differing element 0:
-[]
-[('blue', '#0000FF'), ('red', '#FF0000'), [83 chars]FF')]
-
-- [[], []]
-+ [[('blue', '#0000FF'),
-+   ('red', '#FF0000'),
-+   ('green', '#008000'),
-+   ('yellow', '#FFFF00'),
-+   ('black', '#000000'),
-+   ('white', '#FFFFFF')],
-+  [('orange', '#FFA500'),
-+   ('blue', '#0000FF'),
-+   ('red', '#FF0000'),
-+   ('brown', '#A52A2A')]] : Mauvaise reponse
-
-----------------------------------------------------------------------
-Ran 6 tests in 0.001s
-
-FAILED (failures=1)
+OK
