@@ -34,6 +34,7 @@ def odd_integer_for_loop(end: int) -> list:
     return liste
 
 
+
 def odd_integer_list_comprehension(end: int) -> list:
      liste = [i for i in range(end) if i % 2 != 0]
      return liste
@@ -44,9 +45,10 @@ def loop_traversal(integers: list) -> None:
         print(integers[i], i)
 
 
-def word_dict_for_loop(words: str) -> dict:
+def word_dict_for_loop(words: list) -> dict:
     dict = {}
     for i in words:
+
         dict[i[0].upper()] = i
 
     return dict
@@ -58,12 +60,19 @@ def word_dict_comprehension(words: str) -> dict:
 
 
 def dictionary_traversal(words: dict) -> None:
-    liste = [words[i] for i in words] #comment mette les indexs
+    # liste = [words[i] for i in words] #comment mette les indexs
+    #
+    # liste.sort()
+    liste = []
+    i = 0
+    for k,v in words.items():
+        liste.append((k,v,i))
+        i +=1
 
-    liste.sort()
+    print(sorted(liste))
 
-    for i in range(len(liste)):
-        print(liste[i], i)
+    # for i in range(len(liste)):
+    #     print(liste[i], i)
 
 
 
